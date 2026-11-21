@@ -4,6 +4,7 @@ import "@fontsource/gidole/400.css";
 import "./globals.css";
 import { Cabecalho, Rodape } from "@/components/Cabecalho";
 import { Toast } from "@/components/comum";
+import FaixaProjeto from "@/components/FaixaProjeto";
 import { ProvedorEstado } from "@/lib/estado";
 
 const titulo = League_Spartan({ subsets: ["latin"], weight: "700", variable: "--fonte-titulo", display: "swap" });
@@ -24,6 +25,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <body>
         <ProvedorEstado>
           <a className="pular" href="#conteudo">Pular para o conteúdo</a>
+          <FaixaProjeto />
           <Cabecalho />
           <main id="conteudo" className="conteudo" tabIndex={-1}>{children}</main>
           <Rodape />
